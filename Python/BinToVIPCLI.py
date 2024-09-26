@@ -12,7 +12,7 @@
 # Operation: Hold down 'B' (MR) whilst selecting COM port. Data will be loaded from $0000
 # 
 # python BinToVIPCLI.py
-#
+#                           
 #
 # Requires Python 3.1.2 or newer
 
@@ -84,10 +84,12 @@ if __name__ == '__main__':
     FileName=[]
     while True:
         SourceDirFile = click.prompt(f'{Fore.YELLOW}Binary Filename', default='',hide_input=False,show_choices=False,show_default=False,prompt_suffix='')
+        if SourceDirFile=='':
+            break
         if os.path.isfile(SourceDirFile):
             FileName.append(SourceDirFile)
         else: 
-            break
+            print(f'{Fore.RED}{Style.BRIGHT}File does not EXIST\n')
 
     StudioII=click.confirm(f'{Fore.WHITE}{Style.BRIGHT}\nIs this for the Studio II?',default=False,show_default=False,prompt_suffix=' <N>')
    
