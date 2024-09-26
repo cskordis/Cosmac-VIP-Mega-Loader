@@ -91,6 +91,10 @@ if __name__ == '__main__':
         else: 
             print(f'{Fore.RED}{Style.BRIGHT}File does not EXIST\n')
 
+    if len(FileName)==0:
+        print(f'{Fore.RED}{Style.BRIGHT}No file/s selected,aborting  process......\n')
+        sys.exit()
+
     StudioII=click.confirm(f'{Fore.WHITE}{Style.BRIGHT}\nIs this for the Studio II?',default=False,show_default=False,prompt_suffix=' <N>')
    
     print(f'{Fore.GREEN}{Style.BRIGHT}\n\nProcessing.......\n')          
