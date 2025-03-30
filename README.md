@@ -25,3 +25,4 @@ The arduino code now has 10 preloaded programs that can be accessed by pressing 
  | **7**             |**Dog Fight**     |  
  | **8**             |**Chip-8**        |
  | **9**             |**Round Up**      | 
+ | **A**             |**Androids**      |
