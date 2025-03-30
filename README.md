@@ -10,4 +10,4 @@ The arduino code needs to be placed in the Arduino projects folder under CosmacV
 At the time of writing, the Python version needs to be 3.12 with pyserial, click, time, and colorama installed using pip.
 
 
-3D models and build files kindly designed and provided by Walter Miraglia
+3D models, schematic and build files kindly designed and provided by Walter Miraglia
