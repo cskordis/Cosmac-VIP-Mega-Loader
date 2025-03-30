@@ -19,7 +19,8 @@
 //                     6      Sword Fighter   
 //                     7      Dog Fight   
 //                     8      Chip 8   
-//                     9      Round Up   
+//                     9      Round Up
+//                     A      Androids   
 //
 //	Note:	this requires the TVout1802 library which is a significantly modified version of "TVout"
 //
@@ -279,6 +280,11 @@ void setup()
     if (isPressed[9]) 
     {
       RAMUpload(roundup,2559,0);
+      tone(TONEPIN,PITCH0);delay(200);noTone(TONEPIN);
+    }
+    if (isPressed[10]) 
+    {
+      RAMUpload(androids,2048,0);
       tone(TONEPIN,PITCH0);delay(200);noTone(TONEPIN);
     }
     if (isPressed[11]) 										      // Is the 'B (TR)' key (bottom right) pressed ?
