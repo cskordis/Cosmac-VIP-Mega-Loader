@@ -26,3 +26,6 @@ The arduino code now has 10 preloaded programs that can be accessed by pressing 
  | **8**             |**Chip-8**        |
  | **9**             |**Round Up**      | 
  | **A**             |**Androids**      |
+ | **D**             |**Sequnce**       |
+ | **E**             |**Lander**        |
+ | **F**             |**Spce**          |
