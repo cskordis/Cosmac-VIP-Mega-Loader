@@ -12,15 +12,18 @@
 //                     Key    Name
 //                     0      UFO
 //                     1      Sum Fun
-//                     2      Brix   
-//                     3      Slide   
-//                     4      Animal Race  
-//                     5      Bowling   
-//                     6      Sword Fighter   
-//                     7      Dog Fight   
-//                     8      Chip 8   
+//                     2      Brix
+//                     3      Slide
+//                     4      Animal Race
+//                     5      Bowling
+//                     6      Sword Fighter
+//                     7      Dog Fight
+//                     8      Chip 8
 //                     9      Round Up
-//                     A      Androids   
+//                     A      Androids
+//                     D      Sequence
+//                     E      Lander
+//                     F      Space
 //
 //	Note:	this requires the TVout1802 library which is a significantly modified version of "TVout"
 //
@@ -298,6 +301,24 @@ void setup()
 		  Serial.end();  											    // End serial I/O
 		  CheckAllKeys();											    // Recheck all keys for C-Boot e.g. VIP Monitor
   	}
+    if (isPressed[13]) 
+    {
+      RAMUpload(chip8,512,0);
+      RAMUpload(sequence,324,512);
+      tone(TONEPIN,PITCH0);delay(200);noTone(TONEPIN);
+    }
+    if (isPressed[14]) 
+    {
+      RAMUpload(lander,2304,0);
+      tone(TONEPIN,PITCH0);delay(200);noTone(TONEPIN);
+    }
+  if (isPressed[15]) 
+    {
+      RAMUpload(chip8,512,0);
+      RAMUpload(spaceinv,1020,512);
+      tone(TONEPIN,PITCH0);delay(200);noTone(TONEPIN);
+    }
+
   	TV.begin(NTSC,8,2);								  	   // Initialise TVout (8,2) smallest working size
   	CPU_Reset(vipMemory,sizeof(vipMemory));	 // Initialise CPU
 }
